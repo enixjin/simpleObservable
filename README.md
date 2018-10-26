@@ -1,2 +1,4 @@
 # simpleObservable
-a simple observable
+a simple observable in Typescript
+
+npm i && npm test

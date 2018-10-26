@@ -1,0 +1,75 @@
+{
+  "rules": {
+    "class-name": false,
+    "variable-name": [
+      true,
+      "ban-keywords",
+      "check-format",
+      "allow-leading-underscore"
+    ],
+    "interface-name": [
+      true,
+      "never-prefix"
+    ],
+    "no-string-literal": true,
+    "member-access": false,
+    "array-type": [
+      true,
+      "array-simple"
+    ],
+    "max-line-length": [
+      true,
+      160
+    ],
+    "indent": [
+      true,
+      "spaces"
+    ],
+    "no-arg": true,
+    "no-bitwise": true,
+    "no-console": [
+      true,
+      "log",
+      "debug",
+      "info",
+      "time",
+      "timeEnd",
+      "trace"
+    ],
+    "no-empty-interface": true,
+    "no-eval": true,
+    "no-use-before-declare": true,
+    "no-var-keyword": true,
+    "semicolon": [
+      "always"
+    ],
+    "triple-equals": [
+      true,
+      "allow-null-check"
+    ],
+    "typedef-whitespace": [
+      true,
+      {
+        "call-signature": "nospace",
+        "index-signature": "nospace",
+        "parameter": "nospace",
+        "property-declaration": "nospace",
+        "variable-declaration": "nospace"
+      }
+    ],
+    "typeof-compare": true,
+    "unified-signatures": true,
+    "variable-name": false,
+    "whitespace": [
+      true,
+      "check-branch",
+      "check-decl",
+      "check-operator",
+      "check-separator",
+      "check-type"
+    ]
+  },
+  "exclude": [
+    "**/node_modules/**"
+  ]
+}

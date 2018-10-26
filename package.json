@@ -1,0 +1,23 @@
+{
+  "name": "simpleobservable",
+  "version": "1.0.0",
+  "description": "a simple observable in Typescript",
+  "main": "index.js",
+  "scripts": {
+    "test": "ts-node src/test/Observable.test.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/enixjin/simpleObservable.git"
+  },
+  "author": "enixjin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/enixjin/simpleObservable/issues"
+  },
+  "homepage": "https://github.com/enixjin/simpleObservable#readme",
+  "dependencies": {
+    "ts-node": "^7.0.1",
+    "typescript": "^3.1.3"
+  }
+}
