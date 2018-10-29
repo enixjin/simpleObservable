@@ -1,15 +1,16 @@
 export class Observable {
-    static of = v => new Observable(() => v);
+    static of = v => new Observable(() => Promise.resolve(v));
+    static fromPromise = (v: () => Promise<any>) => new Observable(v);
 
-    constructor(public f: Function) {
+    constructor(public f: (...args) => Promise<any>) {
     }
 
     map(g): Observable {
-        return new Observable(x => g(this.f(x)));
+        return new Observable(x => Promise.resolve(this.f(x).then(g)));
     }
 
     flatMap(g): Observable {
-        return new Observable(x => this.f(x).run()).map(g);
+        return new Observable(x => Promise.resolve(this.f(x))).map(g);
     }
 
     run(x?) {
@@ -17,6 +18,6 @@ export class Observable {
     }
 
     subscribe(onSuccess?: Function): void {
-        onSuccess(this.f());
+        Promise.resolve(this.f()).then(x => onSuccess(x));
     }
 }

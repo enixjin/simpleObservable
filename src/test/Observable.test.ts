@@ -1,14 +1,14 @@
 import {Observable} from "../Observable";
 
 console.log("start construct observable");
-let obs = Observable.of(3)
+let obs = Observable.fromPromise(() => Promise.resolve(3))
     .map(x => {
         console.log(x, "+1");
         return x + 1;
     })
     .map(x => {
         console.log(x, "+2");
-        return Observable.of(x + 2);
+        return Promise.resolve(x + 2);
     })
     .flatMap(x => {
         console.log(x, "*", x);
