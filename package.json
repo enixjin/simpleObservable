@@ -4,7 +4,7 @@
   "description": "a simple observable in Typescript",
   "main": "index.js",
   "scripts": {
-    "test": "ts-node --project src/tsconfig.json src/test/Observable.test.ts"
+    "test": "ts-node --project src/tsconfig.json src/test/**.test.ts"
   },
   "repository": {
     "type": "git",
